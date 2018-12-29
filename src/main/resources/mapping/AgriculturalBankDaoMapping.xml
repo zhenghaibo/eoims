@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.eoims.dao.AgriculturalBankDao">
+	<insert id="addEntity" parameterType="com.eoims.domain.AgriculturalBank">
+		INSERT INTO agricultural_bank_info
+            (orderno,orderdate,ordertype,useraccount,businame,marketerp,marketname,onelevel,
+             twolevel,threelevel,branch,goodsmodel,goodscode,goodsname,sellcount,userlevel,
+             payway,pavobeforeprice,pavoafterprice,pavobeforemoney,pavoaftermoney,Jdpaymoney,
+             giftcardpaymoney,accountbalance,tpavomoney,usermeetmoney,fare,paydate,outstoredate,
+             ordercomdate,province,city,county,region,serviceline,isgive,orderstatus,accountdate,
+             ordercate,validflag,ordermoney,parentno,contractno,chanel,chaneldetail,settlebilldate)
+VALUES (#{orderno},#{orderdate},#{ordertype},#{useraccount},#{businame},#{marketerp},#{marketname},
+        #{onelevel},#{twolevel},#{threelevel},#{branch},#{goodsmodel},#{goodscode},#{goodsname},
+        #{sellcount},#{userlevel},#{payway},#{pavobeforeprice},#{pavoafterprice},#{pavobeforemoney},
+        #{pavoaftermoney},#{Jdpaymoney},#{giftcardpaymoney},#{accountbalance},#{tpavomoney},#{usermeetmoney},
+        #{fare},#{paydate},#{outstoredate},#{ordercomdate},#{province},#{city},#{county},#{region},#{serviceline},
+        #{isgive},#{orderstatus},#{accountdate},#{ordercate},#{validflag},#{ordermoney},#{parentno},#{contractno},
+        #{chanel},#{chaneldetail},#{settlebilldate})
+	</insert>
+
+</mapper> 
