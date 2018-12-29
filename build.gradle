@@ -1,0 +1,57 @@
+import javax.xml.bind.annotation.XmlSchema
+
+group 'com.eoims'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url 'http://maven.springframework.org/release' }
+    maven { url 'http://maven.springframework.org/milestone' }
+    maven { url 'http://maven.springframework.org/snapshot' }
+    maven { url 'http://download.java.net/maven/2' }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile"org.springframework:spring-test:$springVersion"
+    testCompile "com.github.stefanbirkner:system-rules:$systemRulesVersion"
+    compile "org.springframework:spring-core:$springVersion"
+    compile "org.springframework:spring-context:$springVersion"
+    compile "org.springframework:spring-jdbc:$springVersion"
+    compile "org.mybatis:mybatis:$mybatisVersion"
+    compile "org.mybatis:mybatis-spring:$mybatis_spring"
+    compile "commons-dbcp:commons-dbcp:$commons_dbcp"
+    compile "mysql:mysql-connector-java:$mysql_Java"
+    compile "log4j:log4j:$log4jVersion"
+    compile "com.h2database:h2:$h2Version"
+    compile "javax.inject:javax.inject:1"
+    compile "net.sf.ehcache:ehcache:$ehcacheVersion"
+    compile "net.sf.ehcache:ehcache-jcache:$ehcacheJCacheVersion"
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.21'
+    compile "org.springframework:spring-webmvc:$springVersion"
+    compile "org.apache.commons:commons-lang3:$commonsLangVersion"
+    compile "org.apache.poi:poi-ooxml:3.9"
+    compile "javax.servlet:jstl:$jstlVersion"
+    compile 'org.springframework.security:spring-security-web:4.2.1.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.2.1.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:4.2.1.RELEASE'
+    compile "org.springframework:spring-context-support:$springVersion"
+    compile "com.github.pagehelper:pagehelper:4.1.4"
+    compile "com.alibaba:fastjson:1.2.15"
+    compile "org.apache.ws.commons.schema:XmlSchema:1.4.7"
+    compile "commons-pool:commons-pool:1.5.6"
+    compile "org.apache.commons:commons-pool2:2.4.2"
+    providedCompile "javax.servlet:javax.servlet-api:$servletApiVersion"
+    providedCompile "javax.servlet.jsp:jsp-api:$jspApiVersion"
+    providedCompile "javax.el:javax.el-api:$jspElVersion"
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.21'
+
+}
